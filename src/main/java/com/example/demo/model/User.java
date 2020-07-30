@@ -7,7 +7,12 @@ import java.util.Map;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Document
+@Getter
+@Setter
 public class User {
 
 	@Id
@@ -16,7 +21,7 @@ public class User {
 	private Date creationDate = new Date();
 	private Map<String, String> userSettings = new HashMap<>();
 
-	public String getUserId() {
+	/*public String getUserId() {
 		return userId;
 	}
 
@@ -46,6 +51,6 @@ public class User {
 
 	public void setUserSettings(Map<String, String> userSettings) {
 		this.userSettings = userSettings;
-	}
+	}*/
 }
 
